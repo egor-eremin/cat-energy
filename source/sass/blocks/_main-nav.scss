@@ -1,6 +1,7 @@
 .main-nav__list {
-  @include listReset()
+  @include listReset();
 }
+
 .main-nav__link {
   font: {
     size: 20px;
@@ -14,14 +15,18 @@
     top: 22px;
     bottom: 22px;
   }
+
   @include linkReset();
+
   &:hover:not(.main-nav__link_current) {
     color: rgba($color-black, 0.6);
   }
+
   &:active:not(.main-nav__link_current) {
     color: rgba($color-black, 0.3);
   }
 }
+
 .main-nav__link_current {
   color: $color-green;
 }

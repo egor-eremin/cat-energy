@@ -2,6 +2,7 @@
   margin: 0;
   border: none;
   position: relative;
+
   &::before {
     @include absPseudoElement;
     width: calc(100% + (var(--padding-content) * 2));

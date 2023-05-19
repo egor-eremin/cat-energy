@@ -10,25 +10,31 @@
     top: var(--padding-button);
     bottom: var(--padding-button);
   }
+
   @include linkReset(false);
   @include flexCenter;
   background-color: $color-green;
   border: none;
   min-height: var(--min-height-button);
   width: 100%;
+
   &:hover {
     background-color: $color-green-dark;
   }
+
   &:active {
     color: rgba($color-white, 0.3);
   }
 }
+
 .button_grey {
   background-color: $color-grey;
-  color:$color-grey-darken;
+  color: $color-grey-darken;
+
   &:hover {
     background-color: $color-grey-lighter;
   }
+
   &:active {
     color: rgba($color-grey-darken, 0.3);
   }

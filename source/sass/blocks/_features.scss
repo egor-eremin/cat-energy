@@ -4,16 +4,20 @@
   --line-height-feature-title: 37px;
   --line-height-feature-link: var(--font-size-feature-link);
 }
+
 .features__list {
-  @include listReset()
+  @include listReset();
 }
+
 .features__item {
   background-color: $color-grey-secondary;
 }
+
 .features__title {
   color: $color-black;
   font-size: var(--font-size-feature-title);
   line-height: var(--line-height-feature-title);
+
   &::before {
     @include absPseudoElement;
     background: {
@@ -22,13 +26,15 @@
     }
   }
 }
+
 .features__title_slimming {
-  &:before {
+  &::before {
     width: 50px;
     height: 53px;
     background-image: url("../img/features-icon-1.svg");
   }
 }
+
 .features__title_mass-gain {
   &::before {
     width: 67px;
@@ -36,6 +42,7 @@
     background-image: url("../img/features-icon-2.svg");
   }
 }
+
 .features__link {
   @include linkReset();
   font: {
@@ -45,6 +52,7 @@
   line-height: var(--line-height-feature-link);
   text-transform: uppercase;
   color: $color-black;
+
   &:active {
     color: rgba($color-black, 0.3);
   }

@@ -5,8 +5,8 @@
   --padding-button: 7px;
 
   /*--font--*/
-  --font-base: Oswald, Arial, sans-serif;
-  --font-secondary: Arial, sans-serif;
+  --font-base: oswald, arial, sans-serif;
+  --font-secondary: arial, sans-serif;
 
   --font-size: 14px;
   --font-size-h1: 36px;
@@ -25,26 +25,23 @@
 
 /*--sass variables--*/
 /*--font--*/
-$font-value-1: Oswald, normal, 400, "Oswald Medium", "oswaldmedium";
-$font-value-2: Oswald, normal, 500, "Oswald Regular", "oswaldregular";
+$font-value-1: oswald, normal, 400, "Oswald Medium", "oswaldmedium";
+$font-value-2: oswald, normal, 500, "Oswald Regular", "oswaldregular";
 
 /*--color--*/
 $color-white: #ffffff;
 $color-black: #000000;
 $color-black-light: #111111;
 $color-black-lightest: #222222;
-$color-green: #68B738;
-$color-green-dark: #5EAA2F;
-$color-green-darken: #64A83B;
-$color-grey: #F2F2F2;
-$color-grey-light: #EAEAEA;
-$color-grey-lighter: #EBEBEB;
-$color-grey-dark: #CDCDCD;
+$color-green: #68b738;
+$color-green-dark: #5eaa2f;
+$color-green-darken: #64a83b;
+$color-grey: #f2f2f2;
+$color-grey-light: #eaeaea;
+$color-grey-lighter: #ebebeb;
+$color-grey-dark: #cdcdcd;
 $color-grey-darken: #444444;
-$color-grey-secondary: #D9D9D9;
-$color-grey-secondary-1: #E7E7E7;
-$color-grey-secondary-2: #BABABA;
-$color-red: #FF8282;
-
-
-
+$color-grey-secondary: #d9d9d9;
+$color-grey-secondary-1: #e7e7e7;
+$color-grey-secondary-2: #bababa;
+$color-red: #ff8282;

@@ -11,34 +11,38 @@
 
   background-color: $color-grey-light;
 }
+
 .example__desc-title {
   font: {
     family: var(--font-base);
     size: var(--font-size__desc-title);
-  };
+  }
   line-height: var(--line-height__desc-title);
   color: $color-black;
   text-transform: uppercase;
 }
+
 .example__desc-text {
   font-size: var(--font-size__desc-text);
   line-height: var(--line-height__desc-text);
   color: $color-grey-darken;
 }
+
 .example__expenses {
   font: {
     family: var(--font-base);
     size: var(--font-size__expenses);
-  };
+  }
   line-height: var(--line-height__expenses);
   text-transform: uppercase;
   color: $color-black;
 }
+
 .example__switch {
   font: {
     family: var(--font-base);
     size: var(--font-size__switch);
-  };
+  }
   line-height: var(--line-height__switch);
   text-transform: uppercase;
   color: $color-black;
@@ -46,11 +50,12 @@
   border: none;
   padding: 0;
   border-bottom: 1px solid transparent;
+
   &:hover {
     border-bottom-color: rgba($color-black, 0.4);
   }
+
   &:active {
     border-bottom-color: transparent;
   }
 }
-

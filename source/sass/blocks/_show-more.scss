@@ -2,9 +2,11 @@
   --font-size__show-more-text: 12px;
   --line-height__show-more-text: 16px;
 }
+
 .show-more__title {
   color: $color-black-light;
 }
+
 .show-more__text {
   font-size: var(--font-size__show-more-text);
   line-height: var(--line-height__show-more-text);

@@ -1,38 +1,46 @@
 .footer {
   background-color: $color-grey;
 }
+
 .footer__social-list {
   @include listReset();
 }
+
 .footer__copyright {
   @include linkReset();
   font-size: 16px;
   color: inherit;
+
   &:hover {
     path {
       fill: $color-green;
     }
   }
+
   &:active {
     opacity: 0.3;
   }
 }
+
 .footer__social-link {
   &:hover:not(.footer__social-link_facebook) {
     path {
       fill: $color-green;
     }
   }
+
   &:active:not(.footer__social-link_facebook) {
     path {
       fill: rgba($color-green, 0.3);
     }
   }
+
   &.footer__social-link_facebook:hover {
     path {
       stroke: $color-green;
     }
   }
+
   &.footer__social-link_facebook:active {
     path {
       stroke: rgba($color-green, 0.3);

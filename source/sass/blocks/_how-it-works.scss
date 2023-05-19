@@ -1,9 +1,11 @@
 .how-it-works {
   --size-icon__how-it-works: 60px;
 }
+
 .how-it-works__list {
   @include listReset();
 }
+
 .how-it-works__item {
   &::before {
     @include absPseudoElement;
@@ -15,6 +17,7 @@
     }
   }
 }
+
 @for $i from 1 through 4 {
   .how-it-works__item:nth-child(#{$i}) {
     &::before {

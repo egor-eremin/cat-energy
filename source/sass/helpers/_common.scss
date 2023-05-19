@@ -3,22 +3,27 @@
 *::after {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
 }
+
 a {
   vertical-align: top;
   transition: 0.3s ease-in-out;
 }
+
 button {
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
+
 img {
   max-width: 100%;
   height: auto;
   vertical-align: top;
 }
+
 svg {
   path {
     transition: 0.3s ease-in-out;

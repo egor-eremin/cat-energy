@@ -2,16 +2,19 @@
   --font-size__banner__text: 16px;
   --line-height__banner__text: 20px;
 }
+
 .banner__wrapper-inner {
   background: url("../img/banner-bg-mobile@1.jpg") no-repeat center;
   background-size: cover;
 }
+
 .banner__icon {
   width: 78px;
   height: 80px;
   background: url("../img/banner-icon.svg") no-repeat center;
   background-size: 100%;
 }
+
 .banner__text {
   font-size: var(--font-size__banner__text);
   line-height: var(--line-height__banner__text);
