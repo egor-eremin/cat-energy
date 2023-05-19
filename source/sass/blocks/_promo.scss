@@ -1,0 +1,23 @@
+.promo {
+  background: {
+    image: url("../img/promo-img_mobile@1x.jpg"), linear-gradient($color-green-darken, $color-green-darken);
+    repeat: no-repeat;
+    position: top center;
+    size: 320px 302px, 100% 302px;
+  }
+}
+.promo__title {
+  color: $color-white;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.promo__slogan {
+  font: {
+    family: var(--font-base);
+    size: 14px;
+  }
+  line-height: 14px;
+  color: $color-white;
+  text-transform: uppercase;
+  margin-bottom: 29px;
+}

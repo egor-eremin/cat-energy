@@ -1,0 +1,9 @@
+.title-h2 {
+  font: {
+    family: var(--font-base);
+    size: var(--font-size-h2);
+    weight: 400;
+  }
+  line-height: var(--line-height-h2);
+  color: $color-black;
+}

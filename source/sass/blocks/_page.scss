@@ -1,0 +1,14 @@
+.page {
+  height: 100%;
+}
+.page__body {
+  min-height: 100%;
+  font: {
+    family: var(--font-secondary);
+    weight: 400;
+    size: var(--font-size);
+  }
+  line-height: var(--line-height);
+  color: $color-grey-darken;
+  background-color: $color-white;
+}

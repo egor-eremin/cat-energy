@@ -1,0 +1,8 @@
+.title-with-decor {
+  --font-size__title-with-decor: 24px;
+  --line-height__title-with-decor: 26px;
+
+  font-size: var(--font-size__title-with-decor);
+  line-height: var(--line-height__title-with-decor);
+}
+

@@ -1,0 +1,36 @@
+/*--connecting fonts--*/
+@mixin fontAdded($font-name, $font-style, $font-weight, $font-name-local, $font-link) {
+  font: {
+    family: $font-name;
+    style: $font-style;
+    weight: $font-weight;
+  }
+  src: local($font-name-local),
+  url("../fonts/#{$font-link}.woff2") format("woff2"),
+  url("../fonts/#{$font-link}.woff") format("woff");
+}
+
+/*--reset styles for links--*/
+@mixin linkReset($availabilityDisplay: true, $display: inline-block) {
+  text-decoration: none;
+  @if($availabilityDisplay) {
+    display: $display;
+  }
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin absPseudoElement {
+  content: '';
+  position: absolute;
+}
+
+@mixin listReset($padding-left: 0) {
+  margin: 0;
+  padding-left: $padding-left;
+  list-style: none;
+}

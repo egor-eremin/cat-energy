@@ -1,0 +1,28 @@
+.address {
+  --font-size__address-tile: 16px;
+
+  --line-height__address-tile: 18px;
+  --line-height__address-text: 20px;
+}
+.address_white {
+  background-color: $color-white;
+}
+.address__title {
+  font: {
+    family: var(--font-base);
+    size: var(--font-size__address-tile);
+  }
+  line-height: var(--line-height__address-tile);
+  text-transform: uppercase;
+  color: $color-black-light;
+}
+.address__text {
+  line-height: var(--line-height__address-text);
+}
+.address__map {
+  iframe {
+    width: 100%;
+    height: 362px;
+  }
+}
+

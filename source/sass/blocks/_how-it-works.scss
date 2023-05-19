@@ -1,0 +1,24 @@
+.how-it-works {
+  --size-icon__how-it-works: 60px;
+}
+.how-it-works__list {
+  @include listReset();
+}
+.how-it-works__item {
+  &::before {
+    @include absPseudoElement;
+    width: var(--size-icon__how-it-works);
+    height: var(--size-icon__how-it-works);
+    background: {
+      repeat: no-repeat;
+      size: 100%;
+    }
+  }
+}
+@for $i from 1 through 4 {
+  .how-it-works__item:nth-child(#{$i}) {
+    &::before {
+      background-image: url("../img/how-it-works-icon_#{$i}.svg");
+    }
+  }
+}

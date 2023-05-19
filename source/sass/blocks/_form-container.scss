@@ -1,0 +1,14 @@
+.form-container {
+  margin: 0;
+  border: none;
+  position: relative;
+  &::before {
+    @include absPseudoElement;
+    width: calc(100% + (var(--padding-content) * 2));
+    height: 1px;
+    background-color: $color-grey-secondary;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+}
