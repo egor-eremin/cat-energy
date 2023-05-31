@@ -3,4 +3,20 @@
     top: 11px;
     bottom: 18px;
   }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.page-header__logo {
+  display: inline-block;
+}
+
+.page-header__logo_mobile {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }

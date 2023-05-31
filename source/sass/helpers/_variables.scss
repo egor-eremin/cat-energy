@@ -2,6 +2,7 @@
 :root {
   /*--paddings--*/
   --padding-content: 20px;
+  --padding-content_tablet: 30px;
   --padding-button: 7px;
 
   /*--font--*/
@@ -45,3 +46,8 @@ $color-grey-secondary: #d9d9d9;
 $color-grey-secondary-1: #e7e7e7;
 $color-grey-secondary-2: #bababa;
 $color-red: #ff8282;
+
+/*--viewports--*/
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1300px;

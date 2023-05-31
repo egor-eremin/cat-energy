@@ -1,0 +1,16 @@
+.form-choose-program {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.form-choose-program__container {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    &.form-choose-program__container_half-width {
+      width: calc(50% - 40px);
+    }
+  }
+}

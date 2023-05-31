@@ -4,6 +4,8 @@
 
 .footer__social-list {
   @include listReset();
+  display: flex;
+  align-items: center;
 }
 
 .footer__copyright {
@@ -45,5 +47,13 @@
     path {
       stroke: rgba($color-green, 0.3);
     }
+  }
+}
+
+.footer__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }

@@ -7,19 +7,34 @@
 
 .features__list {
   @include listReset();
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
 }
 
 .features__item {
-  background-color: $color-grey-secondary;
+  background-color: $color-grey;
+  padding: 21px 20px 18px;
 }
 
 .features__title {
   color: $color-black;
   font-size: var(--font-size-feature-title);
   line-height: var(--line-height-feature-title);
+  display: flex;
+  align-items: center;
 
   &::before {
-    @include absPseudoElement;
+    content: "";
+    display: block;
     background: {
       repeat: no-repeat;
       size: 100%;

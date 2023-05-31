@@ -1,5 +1,11 @@
 .main-nav__list {
   @include listReset();
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+  }
 }
 
 .main-nav__link {
@@ -8,8 +14,10 @@
     weight: 500;
     family: var(--font-base);
   }
+  width: 100%;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
   color: $color-black;
   padding: {
     top: 22px;
@@ -29,4 +37,10 @@
 
 .main-nav__link_current {
   color: $color-green;
+}
+
+.main-nav__toggle {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }

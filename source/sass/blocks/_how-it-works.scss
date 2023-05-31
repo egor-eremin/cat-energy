@@ -4,11 +4,29 @@
 
 .how-it-works__list {
   @include listReset();
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 37px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-wrap: nowrap;
+  }
 }
 
 .how-it-works__item {
+  display: flex;
+  gap: 20px;
+
   &::before {
-    @include absPseudoElement;
+    content: "";
+    display: block;
     width: var(--size-icon__how-it-works);
     height: var(--size-icon__how-it-works);
     background: {

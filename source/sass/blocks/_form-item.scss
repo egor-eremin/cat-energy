@@ -13,6 +13,7 @@
 
   border: 1px solid $color-grey-secondary-1;
   border-radius: 0;
+  flex-grow: 1;
   font: {
     family: var(--font-base);
     size: var(--font-size__form-item__input);
