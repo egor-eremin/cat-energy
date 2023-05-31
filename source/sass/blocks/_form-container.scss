@@ -1,15 +1,28 @@
 .form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
   margin: 0;
   border: none;
   position: relative;
 
   &::before {
     @include absPseudoElement;
-    width: calc(100% + (var(--padding-content) * 2));
+    width: 100vw;
     height: 1px;
     background-color: $color-grey-secondary;
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
+}
+
+.form-container__label {
+  width: 100%;
+  display: flex;
+  align-items: center;
 }

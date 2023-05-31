@@ -3,4 +3,11 @@
     left: var(--padding-content);
     right: var(--padding-content);
   }
+
+  @media (min-width: $tablet-width) {
+    padding: {
+      left: var(--padding-content_tablet);
+      right: var(--padding-content_tablet);
+    };
+  }
 }
