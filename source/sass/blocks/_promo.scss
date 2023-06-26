@@ -13,12 +13,30 @@
   @media (min-width: $tablet-width) {
     background: none;
   }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    padding-bottom: 54px;
+
+    &::before {
+      @include absPseudoElement;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      height: calc(100% + 165px);
+      background: url("../img/promo-bg.jpg") no-repeat left center;
+      background-size: cover;
+      z-index: -1;
+      pointer-events: none;
+    }
+  }
 }
 
 .promo__title {
   color: $color-white;
   text-align: center;
   margin-bottom: 25px;
+  grid-area: title;
 
   @media (min-width: $tablet-width) {
     color: $color-black;
@@ -26,6 +44,16 @@
     max-width: 414px;
     margin: {
       left: 87px;
+      top: 12px;
+      bottom: 41px;
+    };
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: {
+      top: 31px;
+      left: 80px;
+      bottom: 21px;
     };
   }
 }
@@ -40,27 +68,66 @@
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 29px;
+  grid-area: slogan;
 
   @media (min-width: $tablet-width) {
     color: $color-black;
     text-align: left;
     max-width: 283px;
     margin-left: 87px;
+    margin-bottom: 22px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 80px;
+    margin-bottom: 52px;
   }
 }
 
 .promo__link {
+  margin-top: 2px;
+  grid-area: button;
+
   @media (min-width: $tablet-width) {
     display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    width: max-content;
+    min-width: 244px;
+    margin-top: 0;
+    margin-left: 80px;
   }
 }
 
 .promo__image {
-  @media (min-width: $tablet-width) {
-    display: block;
-    margin: {
-      left: auto;
-      right: auto;
-    };
+  display: block;
+  margin: {
+    left: auto;
+    right: auto;
+  };
+
+  @media (min-width: $desktop-width) {
+    margin-left: -47px;
+    margin-top: -51px;
+  }
+}
+
+.promo__picture {
+  grid-area: img;
+}
+
+.promo__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-areas: "title img"
+      "slogan img"
+      "button img";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto 1fr;
+    align-items: start;
   }
 }

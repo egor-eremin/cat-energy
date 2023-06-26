@@ -6,4 +6,10 @@
   }
   line-height: var(--line-height-h2);
   color: $color-black;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: var(--font-size-h2_tablet);
+    line-height: var(--font-size-h1_tablet);
+  }
 }

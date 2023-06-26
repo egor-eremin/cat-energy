@@ -25,6 +25,15 @@
   &:active {
     color: rgba($color-white, 0.3);
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: var(--font-size-button_tablet);
+    line-height: var(--line-height-button_tablet);
+    padding: {
+      top: var(--padding-button_tablet);
+      bottom: var(--padding-button_tablet);
+    };
+  }
 }
 
 .button_grey {

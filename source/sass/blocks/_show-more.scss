@@ -1,13 +1,107 @@
 .show-more {
   --font-size__show-more-text: 12px;
   --line-height__show-more-text: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: {
+    top: 17px;
+  };
+
+  @media (min-width: $tablet-width) {
+    border: 2px solid $color-grey;
+    height: calc(100% - 81px);
+    align-self: end;
+    padding: 52px 37px 38px;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .show-more__title {
   color: $color-black-light;
+  margin-bottom: 8px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    max-width: 134px;
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 23px;
+  }
 }
 
 .show-more__text {
   font-size: var(--font-size__show-more-text);
   line-height: var(--line-height__show-more-text);
+  margin: 0;
+  margin-bottom: 21px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    --font-size__show-more-text: 16px;
+    --line-height__show-more-text: 18px;
+
+    max-width: 167px;
+  }
+}
+
+.show-more__icon {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin-bottom: 23px;
+
+  &::before,
+  &::after {
+    @include absPseudoElement;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #d3d3d3;
+    transition: 0.3s ease-in-out;
+  }
+
+  &::before {
+    width: 100%;
+    height: 2px;
+  }
+
+  &::after {
+    width: 2px;
+    height: 100%;
+  }
+
+  &:hover,
+  &:active {
+    &::before,
+    &::after {
+      background-color: $color-green;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 49px;
+  }
+}
+
+.show-more__button {
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: auto;
+    padding: {
+      top: 9px;
+      bottom: 9px;
+    };
+  }
 }

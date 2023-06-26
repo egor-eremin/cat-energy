@@ -1,0 +1,14 @@
+.catalog {
+  padding: {
+    top: 8px;
+  };
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 42px;
+  }
+}

@@ -1,5 +1,23 @@
 .how-it-works {
   --size-icon__how-it-works: 60px;
+  --size-icon__how-it-works_tablet: 80px;
+
+  padding-top: 27px;
+  padding-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    padding: {
+      top: 45px;
+      bottom: 47px;
+    };
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: {
+      top: 71px;
+      bottom: 0;
+    };
+  }
 }
 
 .how-it-works__list {
@@ -9,20 +27,47 @@
   gap: 20px;
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 256px);
     justify-content: space-between;
     gap: 37px 0;
+    padding-right: 79px;
+    max-width: 1000px;
   }
 
   @media (min-width: $desktop-width) {
-    flex-wrap: nowrap;
+    grid-template-columns: repeat(4, 256px);
+    max-width: none;
+    padding-right: 0;
   }
 }
 
 .how-it-works__item {
   display: flex;
   gap: 20px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 42px 33px 40px 0;
+    gap: 31px;
+    height: 280px;
+    position: relative;
+
+    &::after {
+      @include absPseudoElement;
+      font: {
+        family: var(--font-base);
+        size: 280px;
+      };
+      line-height: 280px;
+      color: $color-grey;
+      z-index: -1;
+      top: 0;
+      right: 0;
+    }
+  }
 
   &::before {
     content: "";
@@ -30,8 +75,15 @@
     width: var(--size-icon__how-it-works);
     height: var(--size-icon__how-it-works);
     background: {
+      color: $color-green;
       repeat: no-repeat;
-      size: 100%;
+      position: center;
+    }
+    flex-shrink: 0;
+
+    @media (min-width: $tablet-width) {
+      width: var(--size-icon__how-it-works_tablet);
+      height: var(--size-icon__how-it-works_tablet);
     }
   }
 }
@@ -41,5 +93,23 @@
     &::before {
       background-image: url("../img/how-it-works-icon_#{$i}.svg");
     }
+
+    @media (min-width: $tablet-width) {
+      &::after {
+        content: "#{$i}";
+      }
+    }
   }
+}
+
+.how-it-works__title {
+  margin-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+  }
+}
+
+.how-it-works__text {
+  margin-bottom: 0;
 }

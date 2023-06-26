@@ -1,0 +1,35 @@
+.additional {
+  overflow: hidden;
+  padding-top: 24px;
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 69px;
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 76px;
+    margin-bottom: 85px;
+  }
+}
+
+.additional__title {
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.additional__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

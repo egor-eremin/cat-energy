@@ -1,8 +1,14 @@
 .address {
-  --font-size__address-tile: 16px;
+  --font-size__address-title: 16px;
+  --font-size__address-title_tablet: 20px;
 
-  --line-height__address-tile: 18px;
+  --line-height__address-title: 20px;
+  --line-height__address-title_tablet: 25px;
   --line-height__address-text: 20px;
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
 }
 
 .address_white {
@@ -12,20 +18,95 @@
 .address__title {
   font: {
     family: var(--font-base);
-    size: var(--font-size__address-tile);
+    size: var(--font-size__address-title);
   }
-  line-height: var(--line-height__address-tile);
+  line-height: var(--line-height__address-title);
   text-transform: uppercase;
   color: $color-black-light;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: var(--font-size__address-title_tablet);
+    line-height: var(--line-height__address-title_tablet);
+  }
 }
 
 .address__text {
   line-height: var(--line-height__address-text);
+  margin: 0;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    text-align: right;
+
+    br {
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
 }
 
 .address__map {
+  display: flex;
+
   iframe {
     width: 100%;
     height: 362px;
+  }
+
+  @media (min-width: $tablet-width) {
+    iframe {
+      height: 400px;
+    }
+  }
+}
+
+.address__text-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
+  justify-content: space-between;
+  gap: 2px;
+  padding: {
+    top: 28px;
+    bottom: 26px;
+  };
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 171px 159px;
+    padding: {
+      top: 66px;
+      bottom: 55px;
+      left: 40px;
+      right: 40px;
+    };
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $color-white;
+    padding: 0;
+    width: 570px;
+    height: 201px;
+    grid-template-columns: 163px 155px;
+    gap: 87px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.address__wrapper {
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 95px;
   }
 }
