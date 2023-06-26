@@ -6,12 +6,32 @@
   @include listReset();
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 33px;
+  width: 100%;
+  padding: {
+    top: 20px;
+    bottom: 19px;
+  };
+  border-bottom: 1px solid $color-grey-secondary;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    border: none;
+    width: auto;
+    gap: 25px;
+  }
 }
 
 .footer__copyright {
   @include linkReset();
   font-size: 16px;
   color: inherit;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0;
 
   &:hover {
     path {
@@ -22,9 +42,17 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    padding: 0;
+    gap: 22px;
+  }
 }
 
 .footer__social-link {
+  display: flex;
+
   &:hover:not(.footer__social-link_facebook) {
     path {
       fill: $color-green;
@@ -51,9 +79,78 @@
 }
 
 .footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @media (min-width: $tablet-width) {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    padding: {
+      top: 55px;
+      bottom: 61px;
+    };
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: {
+      top: 57px;
+      bottom: 58px;
+    };
+  }
+}
+
+.footer__logo {
+  display: inline-block;
+
+  &[href]:hover {
+    opacity: 0.8;
+  }
+
+  &[href]:active {
+    opacity: 0.6;
+  }
+}
+
+.footer__logo-wrapper {
+  width: 100%;
+  padding: {
+    top: 39px;
+    bottom: 32px;
+  };
+  border-bottom: 1px solid $color-grey-secondary;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    border: none;
+    width: auto;
+  }
+}
+
+.footer__social-link_vk {
+  @media (min-width: $tablet-width) {
+    svg {
+      width: 30px;
+      height: 22px;
+    }
+  }
+}
+
+.footer__social-link_instagram {
+  @media (min-width: $tablet-width) {
+    svg {
+      width: 23px;
+      height: 23px;
+    }
+  }
+}
+
+.footer__social-link_facebook {
+  @media (min-width: $tablet-width) {
+    svg {
+      width: 28px;
+      height: 33px;
+    }
   }
 }

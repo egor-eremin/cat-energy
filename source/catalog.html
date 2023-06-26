@@ -5,26 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/180.png">
+  <link rel="manifest" href="img/favicons/site.webmanifest">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
 
-<header class="page-header wrapper">
+<header class="page-header page-header_nojs wrapper">
   <a href="/" class="page-header__logo">
-    <img width="34" height="38" src="img/logo-mobile.svg" alt="Логотип компании Cat Energy">
+    <picture>
+      <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" width="202" height="59">
+      <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="174" height="52">
+      <img width="34" height="38" src="img/logo-mobile.svg" alt="Логотип компании Cat Energy">
+    </picture>
   </a>
-  <a href="/" class="page-header__logo">
+  <a class="page-header__logo page-header__logo_mobile" href="/">
     <img width="101" height="18" src="img/logo-mobile_2.svg" alt="Текст Cat Energy">
   </a>
+  <button class="nav-toggle" type="button">
+      <span class="visually-hidden">
+        Открыть меню
+      </span>
+    <span class="nav-toggle__line"></span>
+    <span class="nav-toggle__line"></span>
+    <span class="nav-toggle__line"></span>
+  </button>
   <nav class="page-header__nav main-nav">
-    <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">
-              Открыть меню
-            </span>
-    </button>
     <div class="main-nav__wrapper">
-      <ul class="main-nav__list">
+      <ul class="main-nav__list main-nav__list_dark">
         <li class="main-nav__item">
           <a href="/" class="main-nav__link">Главная</a>
         </li>
@@ -51,9 +62,12 @@
       <ul class="catalog__list products">
         <li class="products__item">
           <h3 class="title-h3 products__title">
-            Cat Energy PRO 500 г
+            Cat Energy PRO 500&nbspг
           </h3>
-          <img class="products__img catalog-image" src="img/product-1_mobile@1x.png" alt="Банка корма Cat Energy PRO 500 г со вкусом курицы">
+          <picture class="products__picture">
+            <source media="(min-width: 768px)" srcset="img/product-1_tablet@1x.png 1x, img/product-1_tablet@2x.png 2x" width="161" height="172">
+            <img class="products__img" src="img/product-1_mobile@1x.png" srcset="img/product-1_mobile@2x.png 2x" width="68" height="86" alt="Банка корма Cat Energy PRO 500 г со вкусом курицы">
+          </picture>
           <dl class="products__feature characteristic">
             <div class="characteristic__wrapper">
               <dt class="characteristic__text characteristic__text_term">Масса</dt>
@@ -68,14 +82,17 @@
               <dd class="characteristic__text characteristic__text_definition">700 Р.</dd>
             </div>
           </dl>
-          <button class="button order-button">Заказать</button>
+          <button class="button products__order products-order-button">Заказать</button>
         </li>
         <li class="products__item">
           <h3 class="title-h3 products__title">
-            Cat Energy PRO 1000 г
+            Cat Energy PRO 1000&nbspг
           </h3>
-          <img class="products__img catalog-image" src="img/product-2_mobile@1x.png" alt="Банка корма Cat Energy PRO 1000 г со вкусом курицы">
-          <dl>
+          <picture class="products__picture">
+            <source media="(min-width: 768px)" srcset="img/product-2_tablet@1x.png 1x, img/product-2_tablet@2x.png 2x" width="168" height="207">
+            <img class="products__img" src="img/product-2_mobile@1x.png" srcset="img/product-2_mobile@2x.png 2x" width="84" height="101" alt="Банка корма Cat Energy PRO 1000 г со вкусом курицы">
+          </picture>
+          <dl class="products__feature characteristic">
             <div class="characteristic__wrapper">
               <dt class="characteristic__text characteristic__text_term">Масса</dt>
               <dd class="characteristic__text characteristic__text_definition">1000 г</dd>
@@ -89,13 +106,16 @@
               <dd class="characteristic__text characteristic__text_definition">1000 Р.</dd>
             </div>
           </dl>
-          <button class="button order-button">Заказать</button>
+          <button class="button products__order products-order-button">Заказать</button>
         </li>
         <li class="products__item">
           <h3 class="title-h3 products__title">
-            Cat Energy PRO 500 г
+            Cat Energy PRO 500&nbspг
           </h3>
-          <img class="products__img catalog-image" src="img/product-3_mobile@1x.png" alt="Банка корма Cat Energy PRO 500 г со вкусом рыбы">
+          <picture class="products__picture">
+            <source media="(min-width: 768px)" srcset="img/product-3_tablet@1x.png 1x, img/product-3_tablet@2x.png 2x" width="163" height="174">
+            <img class="products__img" src="img/product-3_mobile@1x.png" srcset="img/product-3_mobile@2x.png 2x" width="68" height="78" alt="Банка корма Cat Energy PRO 500 г со вкусом рыбы">
+          </picture>
           <dl class="products__feature characteristic">
             <div class="characteristic__wrapper">
               <dt class="characteristic__text characteristic__text_term">Масса</dt>
@@ -110,13 +130,16 @@
               <dd class="characteristic__text characteristic__text_definition">700 Р.</dd>
             </div>
           </dl>
-          <button class="button order-button">Заказать</button>
+          <button class="button products__order products-order-button">Заказать</button>
         </li>
         <li class="products__item">
           <h3 class="title-h3 products__title">
-            Cat Energy PRO 1000 г
+            Cat Energy PRO 1000&nbspг
           </h3>
-          <img class="products__img catalog-image" src="img/product-4_mobile@1x.png" alt="Банка корма Cat Energy PRO 1000 г со вкусом рыбы">
+          <picture class="products__picture">
+            <source media="(min-width: 768px)" srcset="img/product-4_tablet@1x.png 1x, img/product-4_tablet@2x.png 2x" width="168" height="200">
+            <img class="products__img" src="img/product-4_mobile@1x.png" srcset="img/product-4_mobile@2x.png 2x" width="84" height="101" alt="Банка корма Cat Energy PRO 1000 г со вкусом рыбы">
+          </picture>
           <dl class="products__feature characteristic">
             <div class="characteristic__wrapper">
               <dt class="characteristic__text characteristic__text_term">Масса</dt>
@@ -128,16 +151,19 @@
             </div>
             <div class="characteristic__wrapper">
               <dt class="characteristic__text characteristic__text_term">Цена</dt>
-              <dd class="characteristic__text characteristic__text_definition">1000 Р</dd>
+              <dd class="characteristic__text characteristic__text_definition">1000 Р.</dd>
             </div>
           </dl>
-          <button class="button order-button">Заказать</button>
+          <button class="button products__order products-order-button">Заказать</button>
         </li>
         <li class="products__item">
           <h3 class="title-h3 products__title">
-            Cat Energy Slim 500 г
+            Cat Energy Slim 500&nbspг
           </h3>
-          <img class="products__img catalog-image" src="img/product-5_mobile@1x.png" alt="Банка корма Cat Energy Slim 500 г с гречкой">
+          <picture class="products__picture">
+            <source media="(min-width: 768px)" srcset="img/product-5_tablet@1x.png 1x, img/product-5_tablet@2x.png 2x" width="161" height="171">
+            <img class="products__img" src="img/product-5_mobile@1x.png" srcset="img/product-5_mobile@2x.png 2x" width="68" height="78" alt="Банка корма Cat Energy Slim 500 г с гречкой">
+          </picture>
           <dl class="products__feature characteristic">
             <div class="characteristic__wrapper">
               <dt class="characteristic__text characteristic__text_term">Масса</dt>
@@ -152,13 +178,16 @@
               <dd class="characteristic__text characteristic__text_definition">400 Р.</dd>
             </div>
           </dl>
-          <button class="button order-button">Заказать</button>
+          <button class="button products__order products-order-button">Заказать</button>
         </li>
         <li class="products__item">
           <h3 class="title-h3 products__title">
-            Cat Energy Slim 1000 г
+            Cat Energy Slim 1000&nbspг
           </h3>
-          <img class="products__img catalog-image" src="img/product-6_mobile@1x.png" alt="Банка корма Cat Energy Slim 1000 г с гречкой">
+          <picture class="products__picture">
+            <source media="(min-width: 768px)" srcset="img/product-6_tablet@1x.png 1x, img/product-6_tablet@2x.png 2x" width="168" height="200">
+            <img class="products__img" src="img/product-6_mobile@1x.png" srcset="img/product-6_mobile@2x.png 2x" width="84" height="100" alt="Банка корма Cat Energy Slim 1000 г с гречкой">
+          </picture>
           <dl class="products__feature characteristic">
             <div class="characteristic__wrapper">
               <dt class="characteristic__text characteristic__text_term">Масса</dt>
@@ -173,13 +202,16 @@
               <dd class="characteristic__text characteristic__text_definition">700 Р.</dd>
             </div>
           </dl>
-          <button class="button order-button">Заказать</button>
+          <button class="button products__order products-order-button">Заказать</button>
         </li>
         <li class="products__item">
           <h3 class="title-h3 products__title">
-            Cat Energy Slim 500 г
+            Cat Energy Slim 500&nbspг
           </h3>
-          <img class="products__img catalog-image" src="img/product-6_mobile@1x.png" alt="Банка корма Cat Energy Slim 500 г с рисом">
+          <picture class="products__picture">
+            <source media="(min-width: 768px)" srcset="img/product-7_tablet@1x.png 1x, img/product-7_tablet@2x.png 2x" width="163" height="174">
+            <img class="products__img" src="img/product-7_mobile@1x.png" srcset="img/product-7_mobile@2x.png 2x" width="72" height="84" alt="Банка корма Cat Energy Slim 500 г с рисом">
+          </picture>
           <dl class="products__feature characteristic">
             <div class="characteristic__wrapper">
               <dt class="characteristic__text characteristic__text_term">Масса</dt>
@@ -194,17 +226,17 @@
               <dd class="characteristic__text characteristic__text_definition">500 Р.</dd>
             </div>
           </dl>
-          <button class="button order-button">Заказать</button>
+          <button class="button products__order products-order-button">Заказать</button>
         </li>
         <li class="products__item show-more">
-          <div class="show-more__icon"></div>
+          <button type="button" class="show-more__icon"></button>
           <h3 class="title-h3 show-more__title">
             Показать еще 100500 товаров
           </h3>
           <p class="show-more__text">
             На самом деле вкусов гораздо больше!
           </p>
-          <button class="show-more__button button button_grey">
+          <button type="button" class="show-more__button button button_grey">
             Показать все
           </button>
         </li>
@@ -213,11 +245,11 @@
   </section>
   <section class="additional">
     <div class="additional__wrapper wrapper">
-      <h2 class="title-h2 title-width-decor additional__title">
-        Дополнительные товары
+      <h2 class="title-h2 title-with-decor title-with-decor_with-left-padding additional__title">
+        <span>Дополнительные товары</span>
       </h2>
       <ul class="additional__list additional-products">
-        <li class="additional-products__item additional-item">
+        <li class="additional-products__item ">
           <h3 class="title-h3 additional-products__title">
             Сахарозаменитель
           </h3>
@@ -227,9 +259,9 @@
               <dd class="additional-characteristic__text additional-characteristic__text_definition">200 Р.</dd>
             </div>
           </dl>
-          <button class="button order-button">Заказать</button>
+          <button class="button additional-products__order products-order-button products-order-button_additional">Заказать</button>
         </li>
-        <li class="additional-products__item additional-item">
+        <li class="additional-products__item ">
           <h3 class="title-h3 additional-products__title">
             Питьевая вода
           </h3>
@@ -239,9 +271,9 @@
               <dd class="additional-characteristic__text additional-characteristic__text_definition">50 Р.</dd>
             </div>
           </dl>
-          <button class="button order-button">Заказать</button>
+          <button class="button additional-products__order products-order-button products-order-button_additional">Заказать</button>
         </li>
-        <li class="additional-products__item additional-item">
+        <li class="additional-products__item ">
           <h3 class="title-h3 additional-products__title">
             Молоко
           </h3>
@@ -251,9 +283,9 @@
               <dd class="additional-characteristic__text additional-characteristic__text_definition">100 Р.</dd>
             </div>
           </dl>
-          <button class="button order-button">Заказать</button>
+          <button class="button additional-products__order products-order-button products-order-button_additional">Заказать</button>
         </li>
-        <li class="additional-products__item additional-item">
+        <li class="additional-products__item ">
           <h3 class="title-h3 additional-products__title">
             Витамины
           </h3>
@@ -263,22 +295,31 @@
               <dd class="additional-characteristic__text additional-characteristic__text_definition">300 Р.</dd>
             </div>
           </dl>
-          <button class="button order-button">Заказать</button>
+          <button class="button additional-products__order products-order-button products-order-button_additional">Заказать</button>
         </li>
       </ul>
+      <section class="banner">
+        <div class="banner__wrapper-inner">
+          <h2 class="title-h2 visually-hidden banner__title">
+            Наши предложения
+          </h2>
+          <div class="banner__icon"></div>
+          <p class="banner__text">Закажите все и&nbsp;получите чехол для кота в&nbsp;подарок!</p>
+        </div>
+      </section>
     </div>
   </section>
-  <section class="banner">
-    <div class="banner__wrapper wrapper">
-      <div class="banner__wrapper-inner">
-        <h2 class="title-h2 visually-hidden banner__title">
-          Наши предложения
-        </h2>
-        <div class="banner__icon"></div>
-        <p class="banner__text">Закажите все и получите чехол для кота в подарок!</p>
-      </div>
-    </div>
-  </section>
+<!--  <section class="banner">-->
+<!--    <div class="banner__wrapper wrapper">-->
+<!--      <div class="banner__wrapper-inner">-->
+<!--        <h2 class="title-h2 visually-hidden banner__title">-->
+<!--          Наши предложения-->
+<!--        </h2>-->
+<!--        <div class="banner__icon"></div>-->
+<!--        <p class="banner__text">Закажите все и&nbsp;получите чехол для кота в&nbsp;подарок!</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
 </main>
 
 <footer class="page__footer footer">
@@ -289,10 +330,10 @@
       </h2>
       <div class="address__text-wrapper">
         <p class="address__title">
-          Приглашаем к сотрудничеству дилеров!
+          Приглашаем к&nbsp;сотрудничеству дилеров!
         </p>
         <p class="text address__text">
-          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+          ул. Большая Конюшенная, д. 19/8<br><br> Санкт&#8209;Петербург
         </p>
       </div>
     </div>
@@ -301,9 +342,11 @@
     </div>
   </section>
   <div class="footer__wrapper wrapper">
-    <a class="footer__logo">
-      <img width="128" height="24" src="img/footer-logo.svg" alt="Логотип компании Cat Energy">
-    </a>
+    <div class="footer__logo-wrapper">
+      <a class="footer__logo" href="/">
+        <img width="128" height="24" src="img/footer-logo.svg" alt="Логотип компании Cat Energy">
+      </a>
+    </div>
     <ul class="footer__social-list">
       <li class="footer__social-item">
         <a href="" class="footer__social-link footer__social-link_vk" aria-label="Вконтакте">
@@ -345,5 +388,6 @@
   </div>
 </footer>
 
+  <script src="js/script.js"></script>
 </body>
 </html>

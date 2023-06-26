@@ -3,11 +3,36 @@
     left: var(--padding-content);
     right: var(--padding-content);
   }
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     padding: {
       left: var(--padding-content_tablet);
       right: var(--padding-content_tablet);
     };
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1280px;
+  }
+}
+
+.wrapper_for-h1 {
+  padding: {
+    top: 26px;
+    bottom: 39px;
+  };
+  border-top: 1px solid $color-grey-secondary;
+  border-bottom: 1px solid $color-grey-secondary;
+
+  @media (min-width: $tablet-width) {
+    padding: {
+      top: 40px;
+    };
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 23px;
   }
 }

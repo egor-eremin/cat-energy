@@ -12,4 +12,9 @@
   line-height: var(--line-height);
   color: $color-grey-darken;
   background-color: $color-white;
+
+  @media (min-width: $tablet-width) {
+    font-size: var(--font-size_tablet);
+    line-height: var(--line-height_tablet);
+  }
 }

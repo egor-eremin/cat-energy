@@ -1,9 +1,43 @@
 .characteristic {
   --font-size__characteristic-text: 12px;
   --line-height__characteristic-text: 16px;
+
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 35px;
+  }
 }
 
 .characteristic__text {
   font-size: var(--font-size__characteristic-text);
   line-height: var(--line-height__characteristic-text);
+
+  @media (min-width: $tablet-width) {
+    --font-size__characteristic-text: 16px;
+    --line-height__characteristic-text: 16px;
+  }
+}
+
+.characteristic__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 8px;
+    border-bottom: 1px solid $color-grey-dark;
+  }
+}
+
+.characteristic__text_definition {
+  margin-left: 0;
 }

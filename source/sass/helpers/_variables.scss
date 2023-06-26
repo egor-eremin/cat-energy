@@ -4,19 +4,27 @@
   --padding-content: 20px;
   --padding-content_tablet: 30px;
   --padding-button: 7px;
+  --padding-button_tablet: 13px;
 
   /*--font--*/
   --font-base: oswald, arial, sans-serif;
   --font-secondary: arial, sans-serif;
 
   --font-size: 14px;
+  --font-size_tablet: 16px;
   --font-size-h1: 36px;
+  --font-size-h1_tablet: 60px;
   --font-size-h2: var(--font-size-h1);
+  --font-size-h2_tablet: var(--font-size-h1_tablet);
   --font-size-h3: 16px;
   --font-size-button: 14px;
+  --font-size-button_tablet: 20px;
+
 
   --line-height: 18px;
+  --line-height_tablet: 24px;
   --line-height-button: 18px;
+  --line-height-button_tablet: 26px;
   --line-height-h2: 40px;
   --line-height-h3: 20px;
 
@@ -26,8 +34,8 @@
 
 /*--sass variables--*/
 /*--font--*/
-$font-value-1: oswald, normal, 400, "Oswald Medium", "oswaldmedium";
-$font-value-2: oswald, normal, 500, "Oswald Regular", "oswaldregular";
+$font-value-1: oswald, normal, 400, "Oswald Regular", "oswaldregular";
+$font-value-2: oswald, normal, 500, "Oswald Medium", "oswaldmedium";
 
 /*--color--*/
 $color-white: #ffffff;
@@ -45,9 +53,10 @@ $color-grey-darken: #444444;
 $color-grey-secondary: #d9d9d9;
 $color-grey-secondary-1: #e7e7e7;
 $color-grey-secondary-2: #bababa;
+$color-grey-secondary-3: #e6e6e6;
 $color-red: #ff8282;
 
 /*--viewports--*/
-$mobile-width: 320px;
+$mobile-width-only: 767px;
 $tablet-width: 768px;
-$desktop-width: 1300px;
+$desktop-width: 1440px;

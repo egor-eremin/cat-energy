@@ -3,19 +3,50 @@
     top: 11px;
     bottom: 18px;
   }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: {
+      top: 24px;
+      bottom: 24px;
+    };
+  }
+
+  @media (max-width: $mobile-width-only) {
+    &.page-header_nojs {
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: {
+      top: 53px;
+      bottom: 53px;
+    };
   }
 }
 
 .page-header__logo {
   display: inline-block;
+
+  &[href]:hover {
+    opacity: 0.8;
+  }
+
+  &[href]:active {
+    opacity: 0.6;
+  }
 }
 
 .page-header__logo_mobile {
+  margin-top: 5px;
+
   @media (min-width: $tablet-width) {
     display: none;
   }

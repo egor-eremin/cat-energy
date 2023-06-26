@@ -1,0 +1,27 @@
+.products-order-button {
+  grid-column: 1/-1;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: {
+      top: 9px;
+      bottom: 9px;
+    };
+  }
+}
+
+.products-order-button_additional {
+  @media (min-width: $tablet-width) {
+    padding: {
+      top: 8px;
+      bottom: 8px;
+    };
+    min-height: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 244px;
+    min-height: 40px;
+  }
+}

@@ -4,4 +4,71 @@
 
   font-size: var(--font-size__title-with-decor);
   line-height: var(--line-height__title-with-decor);
+
+  & span {
+    display: inline-block;
+    position: relative;
+
+    &::after {
+      @include absPseudoElement;
+      width: 100vw;
+      height: 2px;
+      background-color: $color-green;
+      top: 13px;
+      left: calc(100% + 22px);
+
+      @media (min-width: $tablet-width) {
+        top: 22px;
+        left: calc(100% + 42px);
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      &::before {
+        @include absPseudoElement;
+        width: 100vw;
+        height: 2px;
+        background-color: $color-green;
+        top: 22px;
+        left: -39px;
+        transform: translateX(-100%);
+      }
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    --font-size__title-with-decor: 36px;
+    --line-height__title-with-decor: 36px;
+
+    top: 22px;
+
+    &_with-left-padding {
+      span {
+        padding: {
+          left: 37px;
+          right: 37px;
+        };
+
+        &::before {
+          left: 0;
+        }
+
+        &::after {
+          left: 100%;
+        }
+
+        @media (min-width: $desktop-width) {
+          padding: 0;
+
+          &::before {
+            left: -40px;
+          }
+
+          &::after {
+            left: calc(100% + 40px);
+          }
+        }
+      }
+    }
+  }
 }
