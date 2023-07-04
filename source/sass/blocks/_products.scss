@@ -58,6 +58,23 @@
     justify-items: center;
     grid-template-rows: none;
     padding: 8px 38px 40px;
+
+    &.products__item_show-more {
+      margin-top: 81px;
+    }
+
+    &.products__item_show-more:nth-child(3n + 1) {
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &.products__item_show-more:nth-child(3n + 1) {
+      margin-top: 81px;
+    }
+    &.products__item_show-more:nth-child(4n + 1) {
+      margin-top: 0;
+    }
   }
 }
 

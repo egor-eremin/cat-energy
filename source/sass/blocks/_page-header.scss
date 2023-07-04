@@ -7,6 +7,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  z-index: 1;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -16,6 +17,7 @@
       top: 24px;
       bottom: 24px;
     };
+    gap: 32px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -29,11 +31,13 @@
       top: 53px;
       bottom: 53px;
     };
+    gap: 32px 64px;
   }
 }
 
 .page-header__logo {
   display: inline-block;
+  flex-shrink: 0;
 
   &[href]:hover {
     opacity: 0.8;
