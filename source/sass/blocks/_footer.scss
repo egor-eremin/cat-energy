@@ -97,6 +97,13 @@
   svg {
     stroke: #666666;
   }
+
+  @media (min-width: $tablet-width) {
+    svg {
+      width: 28px;
+      height: 33px;
+    }
+  }
 }
 
 .footer__wrapper {
@@ -164,15 +171,6 @@
     svg {
       width: 23px;
       height: 23px;
-    }
-  }
-}
-
-.footer__social-link_facebook {
-  @media (min-width: $tablet-width) {
-    svg {
-      width: 28px;
-      height: 33px;
     }
   }
 }
