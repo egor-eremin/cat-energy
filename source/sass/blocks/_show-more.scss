@@ -11,8 +11,8 @@
 
   @media (min-width: $tablet-width) {
     border: 2px solid $color-grey;
-    height: calc(100% - 81px);
-    align-self: end;
+    //height: calc(100% - 81px);
+    //align-self: end;
     padding: 52px 37px 38px;
 
     &::before {
