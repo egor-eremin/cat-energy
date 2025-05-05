@@ -35,7 +35,11 @@
 
   svg {
     transition: 0.3s ease-in-out;
-    fill: #666666;
+  }
+
+  path {
+    //fill: #666666;
+    fill: red;
   }
 
   &:hover {

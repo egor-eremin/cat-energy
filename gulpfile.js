@@ -15,6 +15,7 @@ const del = require("gulp-clean");
 const cheerio = require("gulp-cheerio");
 const replace = require("gulp-replace");
 const svgmin = require("gulp-svgmin");
+const path = require("path");
 
 
 // Styles
@@ -40,7 +41,7 @@ exports.styles = styles;
 
 const html = () => {
   return gulp.src("source/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("build"));
 }
 
@@ -65,8 +66,8 @@ const optimizeImages = () => {
     .then(imagemin => {
       return gulp.src("source/img/**/*.{png,jpg,svg}")
         .pipe(imagemin.default([
-          imagemin.mozjpeg({ progressive: true }),
-          imagemin.optipng({ optimizationLevel: 3 }),
+          imagemin.mozjpeg({progressive: true}),
+          imagemin.optipng({optimizationLevel: 3}),
           imagemin.svgo()
         ]))
         .pipe(gulp.dest("build/img"));
@@ -89,47 +90,21 @@ exports.copyImages = copyImages;
 
 const createWebp = () => {
   return gulp.src("source/img/**/*.{png,jpg}")
-    .pipe(webp({ quality: 90 }))
+    .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 }
 
 exports.createWebp = createWebp;
 
 // Sprites
-
 const createSprite = () => {
   return gulp.src("source/img/icons/*.svg")
-    .pipe(cheerio({
-      run: $ => {
-        $("[fill]").removeAttr("fill");
-        $("[stroke]").removeAttr("stroke");
-      },
-      parserOptions: { xmlMode: true }
+    .pipe(svgstore({
+      inlineSvg: true
     }))
-    .pipe(replace(/fill=["'].*?["']/g, ""))
-    .pipe(replace(/stroke=["'].*?["']/g, ""))
-    .pipe(svgmin({
-      js2svg: {
-        pretty: true,
-        indent: '\t',
-      },
-      plugins: [
-        {
-          name: 'cleanupIDs',
-          params: {
-            minify: true,
-            prefix: prefix + '-',
-          },
-        },
-        'removeTitle',
-        {
-          name: 'removeViewBox',
-          active: false,
-        },
-        'sortAttrs',
-      ],
-    }))
-    .pipe(svgstore({ inlineSvg: true }))
+    .pipe(replace(/<g fill="none">|<\/g>/g, ''))
+    .pipe(replace(/\s+fill="(?!none)[^"]*"/g, ''))
+    .pipe(replace(/\s+stroke="[^"]*"/g, ''))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"));
 }
@@ -157,7 +132,7 @@ exports.copy = copy;
 // Clean
 
 const clean = () => {
-  return gulp.src("build", { allowEmpty: true })
+  return gulp.src("build", {allowEmpty: true})
     .pipe(del());
 }
 
@@ -198,7 +173,7 @@ const build = gulp.series(
     styles,
     html,
     scripts,
-    // createSprite,
+    createSprite,
     createWebp
   )
 )
@@ -215,7 +190,7 @@ exports.default = gulp.series(
     styles,
     html,
     scripts,
-    // createSprite,
+    createSprite,
     createWebp
   ),
   gulp.series(
