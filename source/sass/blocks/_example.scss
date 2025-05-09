@@ -423,7 +423,8 @@
       box-shadow: 0 0 1px 1px $color-grey-dark;
       filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
       margin-top: -14px;
-      transition: filter 0.3s ease-in-out,
+      transition:
+        filter 0.3s ease-in-out,
         box-shadow 0.3s ease-in-out;
     }
 
@@ -435,7 +436,8 @@
       background-color: $color-green;
       box-shadow: 0 0 1px 1px $color-grey-dark;
       filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
-      transition: filter 0.3s ease-in-out,
+      transition:
+        filter 0.3s ease-in-out,
         box-shadow 0.3s ease-in-out;
     }
 

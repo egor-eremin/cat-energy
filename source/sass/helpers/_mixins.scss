@@ -11,7 +11,8 @@
     style: $font-style;
     weight: $font-weight;
   }
-  src: local($font-name-local),
+  src:
+    local($font-name-local),
     url("../fonts/#{$font-link}.woff2") format("woff2"),
     url("../fonts/#{$font-link}.woff") format("woff");
 }

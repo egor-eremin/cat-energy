@@ -123,7 +123,8 @@
 .promo__wrapper {
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-areas: "title img"
+    grid-template-areas:
+      "title img"
       "slogan img"
       "button img";
     grid-template-columns: auto 1fr;
