@@ -51,6 +51,7 @@ exports.html = html;
 
 const scripts = () => {
   return gulp.src("source/js/script.js")
+    .pipe(plumber())
     .pipe(terser())
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"))
@@ -161,6 +162,7 @@ const watcher = () => {
   gulp.watch("source/js/*.js", gulp.series(scripts));
   gulp.watch("source/*.html", gulp.series(html, sync.reload));
   gulp.watch("source/img/icons/**/*", gulp.series(createSprite, sync.reload));
+  gulp.watch("source/img/**/*", gulp.series(copyImages));
 }
 
 // Build

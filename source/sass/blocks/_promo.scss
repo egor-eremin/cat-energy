@@ -1,14 +1,19 @@
 .promo {
-  background: {
-    image: url("../img/promo-img_mobile@1x.jpg"),
-      linear-gradient($color-green-darken, $color-green-darken);
-    repeat: no-repeat;
-    position: top center;
-    size: 320px 302px, 100% 302px;
-  }
-  padding: {
-    top: 27px;
-  };
+  background-image: url("../img/promo-img_mobile@1x.jpg"), linear-gradient($color-green-darken, $color-green-darken);
+  background-image: unquote(-webkit-image-set(
+      url("../img/promo-img_mobile@1x.webp") type("image/webp"),
+      url("../img/promo-img_mobile@1x.jpg") type("image/jpg"),
+  )), linear-gradient($color-green-darken, $color-green-darken);
+
+  background-image: unquote(image-set(
+      url("../img/promo-img_mobile@1x.webp") type("image/webp"),
+      url("../img/promo-img_mobile@1x.jpg") type("image/jpg"),
+  )), linear-gradient($color-green-darken, $color-green-darken);
+
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 320px 302px, 100% 302px;
+  padding-top: 27px;
 
   @media (min-width: $tablet-width) {
     background: none;
@@ -24,7 +29,20 @@
       bottom: 0;
       width: 50%;
       height: calc(100% + 165px);
-      background: url("../img/promo-bg.jpg") no-repeat left center;
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-image: url("../img/promo-bg.jpg");
+
+      background-image: unquote(-webkit-image-set(
+          url("../img/promo-bg.webp") type("image/webp"),
+          url("../img/promo-bg.jpg") type("image/jpg"),
+      ));
+
+      background-image: unquote(image-set(
+        url("../img/promo-bg.webp") type("image/webp"),
+        url("../img/promo-bg.jpg") type("image/jpg"),
+      ));
+
       background-size: cover;
       z-index: -1;
       pointer-events: none;
