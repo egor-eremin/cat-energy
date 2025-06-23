@@ -16,6 +16,18 @@
 
 .banner__wrapper-inner {
   background-image: url("../img/banner-bg-mobile@1x.jpg");
+  background-image: unquote(-webkit-image-set(
+    url("../img/banner-bg-mobile@1x.webp") type("image/webp") 1x,
+    url("../img/banner-bg-mobile@2x.webp") type("image/webp") 2x,
+    url("../img/banner-bg-mobile@1x.jpg") type("image/jpg") 1x,
+    url("../img/banner-bg-mobile@2x.jpg") type("image/jpg") 2x,
+  ));
+  background-image: unquote(image-set(
+      url("../img/banner-bg-mobile@1x.webp") type("image/webp") 1x,
+      url("../img/banner-bg-mobile@2x.webp") type("image/webp") 2x,
+      url("../img/banner-bg-mobile@1x.jpg") type("image/jpg") 1x,
+      url("../img/banner-bg-mobile@2x.jpg") type("image/jpg") 2x,
+  ));
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -25,20 +37,24 @@
   align-items: center;
   padding: 58px 58px 41px;
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/banner-bg-mobile@2x.jpg");
-  }
-
   @media (min-width: $tablet-width) {
     height: 200px;
     background-image: url("../img/banner-bg-tablet@1x.jpg");
+    background-image: unquote(-webkit-image-set(
+        url("../img/banner-bg-tablet@1x.webp") type("image/webp") 1x,
+        url("../img/banner-bg-tablet@2x.webp") type("image/webp") 2x,
+        url("../img/banner-bg-tablet@1x.jpg") type("image/jpg") 1x,
+        url("../img/banner-bg-tablet@2x.jpg") type("image/jpg") 2x,
+    ));
+    background-image: unquote(image-set(
+        url("../img/banner-bg-tablet@1x.webp") type("image/webp") 1x,
+        url("../img/banner-bg-tablet@2x.webp") type("image/webp") 2x,
+        url("../img/banner-bg-tablet@1x.jpg") type("image/jpg") 1x,
+        url("../img/banner-bg-tablet@2x.jpg") type("image/jpg") 2x,
+    ));
     flex-direction: row;
     justify-content: space-between;
     padding: 57px 124px 60px 78px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/banner-bg-tablet@2x.jpg");
-    }
   }
 
   @media (min-width: $desktop-width) {
@@ -46,10 +62,18 @@
     padding: 56px 42px 43px;
     flex-direction: column;
     background-image: url("../img/banner-bg-desktop@1x.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/banner-bg-desktop@2x.jpg");
-    }
+    background-image: unquote(-webkit-image-set(
+        url("../img/banner-bg-desktop@1x.webp") type("image/webp") 1x,
+        url("../img/banner-bg-desktop@2x.webp") type("image/webp") 2x,
+        url("../img/banner-bg-desktop@1x.jpg") type("image/jpg") 1x,
+        url("../img/banner-bg-desktop@2x.jpg") type("image/jpg") 2x,
+    ));
+    background-image: unquote(image-set(
+        url("../img/banner-bg-desktop@1x.webp") type("image/webp") 1x,
+        url("../img/banner-bg-desktop@2x.webp") type("image/webp") 2x,
+        url("../img/banner-bg-desktop@1x.jpg") type("image/jpg") 1x,
+        url("../img/banner-bg-desktop@2x.jpg") type("image/jpg") 2x,
+    ));
   }
 }
 

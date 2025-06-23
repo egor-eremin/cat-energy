@@ -54,16 +54,25 @@
 
 .address__map {
   display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+  background-image: url("../img/map_mobile.png");
+  height: 362px;
+
 
   iframe {
     width: 100%;
-    height: 362px;
+    height: 100%;
   }
 
   @media (min-width: $tablet-width) {
-    iframe {
-      height: 400px;
-    }
+    background-image: url("../img/map_tablet.png");
+    height: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/map_desktop.png");
   }
 }
 

@@ -35,6 +35,9 @@
 
   svg {
     transition: 0.3s ease-in-out;
+  }
+
+  path {
     fill: #666666;
   }
 
@@ -102,6 +105,7 @@
     svg {
       width: 28px;
       height: 33px;
+      fill: none;
     }
   }
 }

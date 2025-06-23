@@ -22,7 +22,8 @@
   }
   line-height: var(--line-height__form-item__input);
   text-transform: uppercase;
-  padding: var(--padding-top__form-item__input)
+  padding:
+    var(--padding-top__form-item__input)
     var(--padding-horizont__form-item__input)
     var(--padding-bottom__form-item__input);
   transition: 0.3s ease-in-out;
